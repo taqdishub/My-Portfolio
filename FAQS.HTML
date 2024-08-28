@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+        .accordion-body {
+            text-align: justify;
+            word-spacing: 0.5em; /* Adjust as needed */
+        }
+
+        .accordion-body a {
+            color: #003366; /* Dark blue color for links */
+            text-decoration: underline; /* Underline links */
+        }
+
+        .accordion-body a:hover {
+            color: #002244; /* Slightly darker blue for hover effect */
+            text-decoration: underline; /* Ensure underline on hover */
+        }
+    </style>
+</head>
+<body>
+    <div id="faq" class="container my-5">
+        <h1 class="text-center mb-4">Frequently Asked Questions</h1>
+        <div class="accordion" id="faqAccordion">
+            <!-- General Questions -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        What is your area of expertise?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        I am a third-year student specializing in Artificial Intelligence and Machine Learning (AIML). My expertise includes machine learning algorithms, data analysis, and developing AI-driven solutions & WEB development.
+                    </div>
+                </div>
+            </div>
+            <!-- Contact Information -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        How can I get in touch with you?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        You can reach me via the contact form on the <a href="/Contact.html">Contact</a> page, or directly via email at <a href="mailto:taqdiskhan0313@gmail.com">taqdiskhan0313@gmail.com</a>. I typically respond within 48 hours.
+                    </div>
+                </div>
+            </div>
+            <!-- Portfolio Details -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        How can I view your detailed project descriptions?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Detailed descriptions of my projects are available in the <a href="/projects.html">Projects</a> section of my portfolio. Each project includes objectives, methodologies, and outcomes.
+                    </div>
+                </div>
+            </div>
+            <!-- Privacy and Security -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        How is my personal information handled?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Your privacy is important to me. Any personal information you provide through contact forms or other means is used solely for communication and is not shared with third parties. For more details, please refer to the <a href="/privacypolicy.html">Privacy Policy</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

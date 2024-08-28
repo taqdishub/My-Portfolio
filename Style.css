@@ -1,0 +1,209 @@
+
+  
+    .form-container {
+        max-width: 800px;
+        margin: auto;
+        padding: 15px; /* Add padding for better mobile spacing */
+        position: relative; /* Position relative to place toast inside */
+    }
+    .form-header {
+        margin-bottom: 20px;
+    }
+    .form-header h1 {
+        font-size: 2rem; /* Default font size for larger screens */
+        text-align: center; /* Keep the header centered */
+        margin-bottom: 10px; /* Space below the heading */
+    }
+    .form-header p {
+        text-align: justify; /* Justify the paragraph text */
+        word-spacing: 0.3em; /* Adjust spacing as needed */
+        margin: 0; /* Remove default margin for better control */
+    }
+    .btn-primary {
+        background-color: #003366;
+        border-color: #003366;
+    }
+    .btn-primary:hover {
+        background-color: #002244;
+        border-color: #002244;
+    }
+    .date-input-container {
+        position: relative;
+    }
+    .date-input-container input[type="date"] {
+        padding-right: 2.5rem; /* Space for the icon */
+    }
+    .date-input-container .calendar-icon {
+        position: absolute;
+        top: 50%;
+        right: 0.5rem;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: #003366;
+    }
+    .date-input-container .calendar-icon:hover {
+        color: #002244;
+    }
+    /* Justify text in textarea */
+    textarea.form-control {
+        text-align: justify;
+        word-spacing: 0.3em; /* Adjust spacing as needed */
+    }
+    /* Styles for text-muted within form-text */
+    .form-text.text-muted {
+        text-align: justify; /* Justify the text alignment */
+        word-spacing: 0.3em; /* Adjust spacing between words as needed */
+        color: #6c757d; /* Bootstrap's default muted text color */
+        margin-top: 0.5rem; /* Space above the text */
+    }
+    /* Toast styling */
+    .toast-container {
+        position: fixed; /* Fix the position at the top of the viewport */
+        top: 20px; /* Space from the top of the viewport */
+        left: 50%;
+        transform: translateX(-50%); /* Center horizontally */
+        z-index: 1050; /* Ensure it is above other content */
+        width: auto; /* Allow width to be auto */
+        max-width: 400px; /* Set a maximum width for the toast */
+        text-align: center; /* Center text inside toast */
+    }
+    .toast {
+        text-align: center; /* Center text inside toast */
+        word-spacing: 0.2em; /* Add some word spacing */
+        font-size: 0.875rem; /* Smaller font size */
+        max-width: 100%; /* Set a maximum width for the toast */
+        margin: auto; /* Center horizontally within the container */
+    }
+    .toast-body {
+        font-size: 0.875rem; /* Smaller font size for the toast body */
+    }
+    .toast-header {
+        padding: 0.5rem 1rem; /* Reduce header padding */
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+        .form-header h1 {
+            font-size: 1.75rem; /* Reduce font size on medium screens */
+        }
+    }
+
+    @media (max-width: 576px) {
+        .form-header h1 {
+            font-size: 1.5rem; /* Further reduce font size on small screens */
+        }
+        .form-header p {
+            font-size: 0.875rem; /* Adjust font size for better readability */
+        }
+        .form-container {
+            padding: 10px; /* Adjust padding on small screens */
+        }
+        textarea.form-control {
+            font-size: 0.875rem; /* Adjust textarea font size */
+        }
+        .btn-primary {
+            font-size: 0.875rem; /* Adjust button font size */
+        }
+    }
+
+
+    
+/* Ensure the body and html take up full height */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Ensure body uses flexbox to position footer correctly */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make sure content takes up available space */
+.content {
+    flex: 1;
+    margin-bottom: 0; /* Ensure no margin at the bottom */
+}
+
+/* Footer styling */
+footer {
+    width: 100%;
+    background-color: #343a40;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    margin: 0; /* Ensure no margin around the footer */
+}
+
+.footer-text {
+    font-size: 16px; /* Adjust as needed */
+    margin: 0; /* Remove margin from the footer text */
+}
+
+.footer-icon i {
+    font-size: 24px; /* Adjust as needed */
+}
+
+.footer .footer-icon {
+    margin: 0 10px; /* Ensure consistent spacing for icons */
+}
+
+/* Media Query for screens with max-width of 350px */
+@media (max-width: 350px) {
+    .footer-text {
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
+
+    .footer-icon i {
+        font-size: 20px; /* Reduce icon size for smaller screens */
+    }
+}
+
+    
+
+  
+    /* Ensure pagination is responsive */
+.pagination {
+    margin: 20px 0; /* Adjust margin to suit your design */
+}
+
+.page-item .page-link {
+    padding: 0.5rem 0.75rem; /* Adjust padding to reduce excess space */
+}
+
+.page-item.active .page-link {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+}
+
+.container {
+    padding: 2rem; /* General padding for the container */
+  }
+  .form-container {
+    text-align: center; /* Center-align text within the form container */
+    max-width: 800px; /* Optional: Limits the width of the content for better readability */
+    margin: 0 auto; /* Center the container horizontally */
+  }
+  .form-container h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem; /* Adds space below the heading */
+  }
+  .form-container h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem; /* Adds space below the subheading */
+  }
+  .form-container ul {
+    list-style-type: none; /* Removes default bullets */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    font-size: 1rem; /* Adjust font size as needed */
+  }
+  .form-container li {
+    margin: 0.5rem 0; /* Adds space between list items */
+    word-spacing: 0.2rem; /* Adds space between words if necessary */
+  }
+
+
+    

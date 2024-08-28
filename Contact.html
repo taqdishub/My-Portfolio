@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Me</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            position: relative; /* Relative positioning for absolute children */
+        }
+        .contact-form h2 {
+            margin-bottom: 20px;
+        }
+        .toast-container {
+            position: absolute; /* Absolute positioning within the container */
+            top: 20px; /* Adjust as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%; /* Ensure it spans the width of the container */
+            max-width: 400px; /* Maximum width */
+            z-index: 1050; /* Bootstrap toast z-index */
+        }
+        .toast {
+            font-size: 0.875rem; /* Smaller font size */
+            max-width: 100%; /* Ensure it does not overflow */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Taqdees Golandaz</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact.html">Contact Me</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="contact-form">
+            <div class="toast-container">
+                <div class="toast" id="successToast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <img src="check.png" class="rounded me-2" alt="Notification Icon">
+                        <strong class="me-auto">Success</strong>
+                        <small class="text-muted">Just now</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                        Your message has been sent successfully.
+                    </div>
+                </div>
+            </div>
+            <h2 style="text-align: left; margin: 0 auto; font-size: 2rem;">I’m Here for You</h2>
+<br>
+            <script src="https://sheetdb.io/s/f/1zzwht7ud920d.js"></script>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the default form submission
+
+            // Create a FormData object
+            var formData = new FormData(this);
+
+            // Simulate form submission
+            // Normally, you would send this data to your server
+            console.log("Form data:", ...formData.entries());
+
+            // Show the toast notification
+            var toastEl = document.getElementById('successToast');
+            var toast = new bootstrap.Toast(toastEl, { delay: 3000 }); // Set delay to 3 seconds
+            toast.show(); // Show the toast notification
+
+            // Optionally, clear the form fields after submission
+            document.getElementById('contactForm').reset();
+        });
+    </script>
+    
+</body>
+</html>

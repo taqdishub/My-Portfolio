@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page 2 - Taqdees khan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <style>
+        /* Gallery Styles */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            height: 500px; /* Set a fixed height for all gallery items */
+            background-color: #f8f9fa; /* Optional: Background color for empty spaces */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the container without distortion */
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            padding: 10px;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1; /* Show overlay on hover */
+        }
+
+        .overlay .text {
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        @media (min-width: 500px) and (max-width: 768px) {
+            .gallery-item {
+                height: 620px; /* Height for small screens */
+            }
+        }
+
+        /* Ensure the body and html take up full height */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        /* Ensure body uses flexbox to position footer correctly */
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Make sure content takes up available space */
+        .content {
+            flex: 1;
+        }
+
+        /* Remove default margin for the heading */
+        .heading {
+            margin-top: 0;
+            padding-top: 0;
+        }
+    </style>
+    
+<style>
+    /* Ensure the body and html take up full height */
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+
+    /* Ensure body uses flexbox to position footer correctly */
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Make sure content takes up available space */
+    .content {
+        flex: 1;
+    }
+
+    /* Footer styling */
+    footer{
+        width:100%;
+    }
+    .footer {
+        height: 95px;
+        width: 100%;
+        background-color: #343a40;
+        color: white;
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    .footer-text {
+        font-size: 16px; /* Adjust as needed */
+    }
+
+    .footer-icon i {
+        font-size: 24px; /* Adjust as needed */
+    }
+
+    .footer .footer-icon {
+        margin: 0 10px;
+    }
+
+    /* Media Query for screens with max-width of 350px */
+    @media (max-width: 350px) {
+        .footer-text {
+            font-size: 14px; /* Reduce font size for smaller screens */
+        }
+
+        .footer-icon i {
+            font-size: 20px; /* Reduce icon size for smaller screens */
+        }
+    }
+    
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Taqdees Khan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Topics
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/FAQS.HTML">FAQS</a></li>
+                            <li><a class="dropdown-item" href="/projects.html">Projects</a></li>
+                            <li><a class="dropdown-item" href="/privacypolicy.html">Privacy Policy</a></li>
+                            <li><a class="dropdown-item" href="/support.html">Support</a></li>
+                            <div class="dropdown-divider"></div>
+                            <li><a class="dropdown-item" href="/writeForMe.html">Write For Me</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Contact.html">Contact Me</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+<br>
+
+    <div class="container">
+        <h2 class="text-center mb-4 heading">Photo Gallery Page-2</h2>
+        
+        <div class="row">
+            <!-- Gallery Item 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="17..jpg" class="img-fluid" alt="Image 1">
+                </div>
+            </div>
+
+            <!-- Gallery Item 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="18..jpg" class="img-fluid" alt="Image 2">
+                </div>
+            </div>
+
+            <!-- Gallery Item 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="2..jpg" class="img-fluid" alt="Image 3">
+                </div>
+            </div>
+
+            <!-- Gallery Item 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="19..jpg" class="img-fluid" alt="Image 4">
+                </div>
+            </div>
+
+            <!-- Gallery Item 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="20..jpg" class="img-fluid" alt="Image 5">
+                </div>
+            </div>
+
+            <!-- Gallery Item 6 -->
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="21..jpg" class="img-fluid" alt="Image 6">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Gallery Item 7 -->
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="22..jpg" class="img-fluid" alt="Image 7">
+                </div>
+            </div>
+        
+            <!-- Gallery Item 8 -->
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="23..jpg" class="img-fluid" alt="Image 8">
+                </div>
+            </div>
+        
+            <!-- Gallery Item 9 -->
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="24..jpg" class="img-fluid" alt="Image 9">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Gallery Item 10 -->
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="25..jpg" class="img-fluid" alt="Image 10">
+                </div>
+            </div>
+        
+            <!-- Gallery Item 11 -->
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="26..jpg" class="img-fluid" alt="Image 11">
+                </div>
+            </div>
+        
+            <!-- Gallery Item 12 -->
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="27..jpg" class="img-fluid" alt="Image 12">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="page1.html">Previous</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="page1.html">1</a>
+          </li>
+          <li class="page-item active" aria-current="page">
+            <a class="page-link" href="page2.html">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="page3.html">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="page3.html">Next</a>
+          </li>
+        </ul>
+      </nav>
+      
+      
+    
+<!-- Footer -->
+<footer class="footer">
+    <div class="container text-center">
+        <p class="mb-1 footer-text">© 2024 Taqdees Khan. All rights reserved.</p>
+        <div class="d-flex justify-content-center flex-wrap mb-2">
+            <a href="https://www.Facebook.com/taqdis.golandaz.16" class="text-white mx-2 my-1 footer-icon" aria-label="Facebook" target="_blank">
+                <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://twitter.com/its_taqdis25" class="text-white mx-2 my-1 footer-icon" aria-label="Twitter" target="_blank">
+                <i class="bi bi-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/its_taqdis25/" class="text-white mx-2 my-1 footer-icon" aria-label="Instagram" target="_blank">
+                <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/taqdiskhan0313" class="text-white mx-2 my-1 footer-icon" aria-label="LinkedIn" target="_blank">
+                <i class="bi bi-linkedin"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9Y1W+GIo82kzM1dA5b02GmBR7Etc1Z24RI7F1/2MwZsC2dHFlh5" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<!-- JavaScript for automatic slide change -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var myCarousel = document.querySelector('#carouselExampleIndicators');
+        var carousel = new bootstrap.Carousel(myCarousel, {
+            interval: 3000 // Change slide every 3 seconds
+        });
+    });
+</script>
+</body>
+</html>

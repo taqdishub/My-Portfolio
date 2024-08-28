@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+        .accordion-body {
+            text-align: justify;
+            word-spacing: 0.5em; /* Adjust as needed */
+        }
+
+        .accordion-body a {
+            color: #003366; /* Dark blue color for links */
+            text-decoration: underline;
+        }
+
+        .accordion-body a:hover {
+            color: #002244; /* Slightly darker blue for hover effect */
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="support" class="container my-5">
+        <h1 class="text-center mb-4">Support and Assistance</h1>
+        <div class="accordion" id="supportAccordion">
+            <!-- Technical Support -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        How can I get technical support for your projects?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#supportAccordion">
+                    <div class="accordion-body">
+                        For technical support related to my projects, please use the issue tracker available on the respective GitHub repository of each project. You can also contact me directly via the <a href="/Contact.html">Contact</a> page or email me at <a href="mailto:taqdiskhan0313@gmail.com">taqdiskhan0313@gmail.com</a>. I typically respond within 48 hours.
+                    </div>
+                </div>
+            </div>
+            <!-- Resources and Documentation -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Are there any resources or documentation available for your projects?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#supportAccordion">
+                    <div class="accordion-body">
+                        Yes, each of my projects on GitHub includes detailed documentation and setup guides. You can find this information in the <code>README.md</code> file of each repository. For further clarification or specific questions, please reach out through the <a href="/Contact.html">Contact</a> page.
+                    </div>
+                </div>
+            </div>
+            <!-- Custom Features -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Can I request custom features or enhancements for your projects?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#supportAccordion">
+                    <div class="accordion-body">
+                        Absolutely! I am open to feature requests and enhancements for my projects. Please open an issue on the relevant GitHub repository with your request, or contact me directly through the <a href="/Contact.html">Contact</a> page. I will review your suggestions and consider them for future updates.
+                    </div>
+                </div>
+            </div>
+            <!-- Contributing -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        How can I contribute to your open-source projects?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#supportAccordion">
+                    <div class="accordion-body">
+                        Contributions to my open-source projects are welcome! To contribute, please fork the repository, make your changes, and submit a pull request. Review the contribution guidelines provided in each repository. If you have any questions about contributing, feel free to reach out via the <a href="/Contact.html">Contact</a> page.
+                    </div>
+                </div>
+            </div>
+            <!-- Reporting Bugs -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        What should I do if I encounter a bug or issue with your projects?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#supportAccordion">
+                    <div class="accordion-body">
+                        If you encounter a bug or issue, please report it using the issue tracker on the project's GitHub repository. Provide as much detail as possible, including steps to reproduce the issue, screenshots if applicable, and your environment details. This helps me address the issue more effectively.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

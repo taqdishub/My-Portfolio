@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Taqdees Khan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <style>
+        /* Gallery Styles */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            height: 500px; /* Set a fixed height for all gallery items */
+            background-color: #f8f9fa; /* Optional: Background color for empty spaces */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the container without distortion */
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            padding: 10px;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1; /* Show overlay on hover */
+        }
+
+        .overlay .text {
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        @media (min-width: 500px) and (max-width: 768px) {
+            .gallery-item {
+                height: 620px; /* Height for small screens */
+            }
+        }
+
+        /* Ensure the body and html take up full height */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        /* Ensure body uses flexbox to position footer correctly */
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Make sure content takes up available space */
+        .content {
+            flex: 1;
+        }
+
+        /* Footer styling */
+        .footer {
+            height: 95px;
+            width: 100%;
+            background-color: #343a40;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .footer-text {
+            font-size: 16px; /* Adjust as needed */
+        }
+
+        .footer-icon i {
+            font-size: 24px; /* Adjust as needed */
+        }
+
+        .footer .footer-icon {
+            margin: 0 10px;
+        }
+
+        /* Media Query for screens with max-width of 350px */
+        @media (max-width: 350px) {
+            .footer-text {
+                font-size: 14px; /* Reduce font size for smaller screens */
+            }
+
+            .footer-icon i {
+                font-size: 20px; /* Reduce icon size for smaller screens */
+            }
+        }
+        
+        /* Carousel Styles */
+        .carousel-wrapper {
+            padding-left: 15px;  /* Adjust as needed */
+            padding-right: 15px; /* Adjust as needed */
+            margin-top: 2rem; /* Add top margin for spacing */
+        }
+
+        .carousel-inner {
+            height: 400px; /* Default height for carousel items */
+        }
+
+        .carousel-item {
+            height: 100%; /* Make sure the carousel item takes up full height */
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%; /* Ensure image covers the height of the carousel item */
+            object-fit: cover; /* Maintain aspect ratio while covering container */
+        }
+        @media (width: 540px) {
+            .carousel-inner {
+                height: 700px; /* Increase height on larger screens */
+            }
+        }
+
+        @media (min-width: 768px) {
+            .carousel-inner {
+                height: 900px; /* Increase height on larger screens */
+            }
+        }
+
+        @media (min-width: 992px) {
+            .carousel-inner {
+                height: 1000px; /* Further increase height on extra-large screens */
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .carousel-inner {
+                height:1200px; /* Further increase height on very large screens */
+                max-width: 80%; /* Reduce width to allow for more height */
+                margin: 0 auto; /* Center the carousel */
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Taqdees Khan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Topics
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/FAQS.HTML">FAQS</a></li>
+                            <li><a class="dropdown-item" href="/projects.html">Projects</a></li>
+                            <li><a class="dropdown-item" href="/privacypolicy.html">Privacy Policy</a></li>
+                            <li><a class="dropdown-item" href="/support.html">Support</a></li>
+                            <div class="dropdown-divider"></div>
+                            <li><a class="dropdown-item" href="/writeForMe.html">Write For Me</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Contact.html">Contact Me</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="carousel-wrapper">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="1..jpg" class="d-block w-100" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="2..jpg" class="d-block w-100" alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="3..png" class="d-block w-100" alt="Slide 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="4..jpg" class="d-block w-100" alt="Slide 4">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1 class="text-center mt-4">Photo Gallery</h1>
+        <br>
+        <div class="row">
+            <!-- Gallery Items -->
+            <!-- Gallery Item 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="5..jpg" class="img-fluid" alt="Image 1">
+                </div>
+            </div>
+            <!-- Gallery Item 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="6..jpg" class="img-fluid" alt="Image 2">
+                </div>
+            </div>
+            <!-- Gallery Item 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="7..jpg" class="img-fluid" alt="Image 3">
+                </div>
+            </div>
+            <!-- Gallery Item 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="8..jpg" class="img-fluid" alt="Image 4">
+                </div>
+            </div>
+            <!-- Gallery Item 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="9..jpg" class="img-fluid" alt="Image 5">
+                </div>
+            </div>
+            <!-- Gallery Item 6 -->
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="10..jpg" class="img-fluid" alt="Image 6">
+                </div>
+            </div>
+            <!-- Gallery Item 7 -->
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="11..jpg" class="img-fluid" alt="Image 7">
+                </div>
+            </div>
+            <!-- Gallery Item 8 -->
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="12..jpg" class="img-fluid" alt="Image 8">
+                </div>
+            </div>
+            <!-- Gallery Item 9 -->
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="13..jpg" class="img-fluid" alt="Image 9">
+                </div>
+            </div>
+            <!-- Gallery Item 10 -->
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="14..jpg" class="img-fluid" alt="Image 10">
+                </div>
+            </div>
+            <!-- Gallery Item 11 -->
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="15..jpg" class="img-fluid" alt="Image 11">
+                </div>
+            </div>
+            <!-- Gallery Item 12 -->
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="16..jpg" class="img-fluid" alt="Image 12">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            <li class="page-item active" aria-current="page">
+                <a class="page-link" href="page1.html">1</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="page2.html">2</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="page3.html">3</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="page2.html">Next</a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
+    
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p class="mb-1 footer-text">© 2024 Taqdees Khan. All rights reserved.</p>
+            <div class="d-flex justify-content-center flex-wrap mb-2">
+                <a href="https://www.Facebook.com/taqdis.golandaz.16" class="text-white mx-2 my-1 footer-icon" aria-label="Facebook" target="_blank">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="https://twitter.com/its_taqdis25" class="text-white mx-2 my-1 footer-icon" aria-label="Twitter" target="_blank">
+                    <i class="bi bi-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/its_taqdis25/" class="text-white mx-2 my-1 footer-icon" aria-label="Instagram" target="_blank">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/taqdiskhan0313" class="text-white mx-2 my-1 footer-icon" aria-label="LinkedIn" target="_blank">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9Y1W+GIo82kzM1dA5b02GmBR7Etc1Z24RI7F1/2MwZsC2dHFlh5" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- JavaScript for automatic slide change -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var myCarousel = document.querySelector('#carouselExampleIndicators');
+            var carousel = new bootstrap.Carousel(myCarousel, {
+                interval: 3000 // Change slide every 3 seconds
+            });
+        });
+    </script>
+</body>
+</html>
